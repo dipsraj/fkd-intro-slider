@@ -1,0 +1,175 @@
+* {
+    box-sizing: border-box;
+}
+
+.md-introduction {
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 30;
+    width: 100vw;
+    height: 100vh;
+}
+
+.md-introduction__nav {
+    position: fixed;
+    z-index: 30;
+    bottom: 0;
+    /*height: 200px;*/
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.nav-button {
+    margin: 0 16px 16px;
+    color: #4caf50;
+}
+
+.item {
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 33;
+}
+
+.owl-dots {
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 20px;
+    left: 25%;
+    right: 25%;
+}
+
+.owl-dot > span {
+    background-color: rgba(76, 175, 80,0.3) !important;
+}
+
+.active > span {
+    background-color: #4caf50 !important;
+
+}
+
+.owl-nav {
+    display: none;
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    /*display: flex;*/
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    z-index: 29 !important;
+}
+#ok-button{
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-right: 16px;
+    margin-bottom: 16px;
+    z-index:30;
+}
+#ok-button > button{
+    color: #4caf50;
+}
+
+@media only screen and (min-width: 800px) {
+    .md-introduction {
+        position: fixed;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        /*width: 100%;*/
+        /*height: 100%;*/
+        overflow: hidden;
+    }
+
+    .md-introduction__shadow {
+        z-index: 29;
+        position: absolute;
+        /*top: 0;*/
+        /*left: 0;*/
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+        pointer-events: none;
+    }
+
+    .md-introduction__carousel {
+        z-index: 30;
+        position: absolute;
+        width: 400px;
+    }
+
+    .item {
+        height: 400px;
+    }
+
+    .owl-stage-outer {
+        position: relative;
+        z-index: 32;
+        border-radius: 10px;
+        box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12), 0 3px 5px -1px rgba(0, 0, 0, .2)
+    }
+
+    .owl-nav {
+        z-index: 29 !important;
+        display: flex;
+        margin: 0 !important;
+        height: 100%;
+        top: 0;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .md-button--fab {
+        background-color: #fff;
+    }
+
+    .owl-prev, .owl-next {
+        /*height: 40px;*/
+        /*width: 40px;*/
+        background-color: transparent !important;
+        /*border-radius: 50% !important;*/
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .owl-prev > i, .owl-next > i {
+        color: #111;
+    }
+
+    .owl-prev {
+        transform: translateX(-120px);
+    }
+
+    .owl-next {
+        transform: translateX(120px);
+    }
+
+    .owl-dots {
+        /*position: relative;*/
+        bottom: -50px;
+        left: 0;
+        width: 100%;
+    }
+
+    .md-introduction__nav {
+        visibility: hidden;
+    }
+
+    #ok-button{
+        position: absolute;
+    }
+}
