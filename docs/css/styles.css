@@ -91,10 +91,11 @@
         /*width: 100%;*/
         /*height: 100%;*/
         overflow: hidden;
+        z-index: 30;
     }
 
     .md-introduction__shadow {
-        z-index: 29;
+        z-index: 10;
         position: absolute;
         /*top: 0;*/
         /*left: 0;*/
@@ -111,6 +112,7 @@
     }
 
     .item {
+        background-color: #fff;
         height: 400px;
     }
 
