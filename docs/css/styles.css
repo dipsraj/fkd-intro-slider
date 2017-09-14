@@ -38,9 +38,10 @@
     justify-content: flex-end;
     align-items: center !important;
     z-index: 33;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 80px;
+}
+.item > p{
+    position: absolute;
+    top:50px;
 }
 
 .owl-dots {
@@ -84,7 +85,7 @@
     color: #4caf50;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 800px) and (min-height: 500px) {
     .md-introduction {
         position: fixed;
         display: flex;
@@ -117,9 +118,11 @@
     .item {
         background-color: #fff;
         height: 400px;
-        padding-bottom: 12px;
     }
-
+    .item > p{
+        top: 88%;
+        /*bottom:10px;*/
+    }
     .owl-stage-outer {
         position: relative;
         z-index: 32;
