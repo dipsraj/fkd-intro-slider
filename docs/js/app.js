@@ -16,11 +16,13 @@ $(function () {
         if ($('.owl-next').hasClass('disabled')) {
             $('.md-introduction__nav').css('display', 'none');
             $('#ok-button').css('display', 'block');
+            $('.owl-dots').css('display','none');
             $('#ok-button').find('.md-button').prop('disabled', false);
         }
         else {
             $('.md-introduction__nav').css('display', 'flex');
             $('#ok-button').css('display', 'none');
+            $('.owl-dots').css('display','');
             $('#ok-button').find('.md-button').prop('disabled', true);
         }
     });
