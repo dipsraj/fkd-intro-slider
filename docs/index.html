@@ -35,40 +35,41 @@
 <aside>
     <div class="md-introduction">
         <div class="md-introduction__carousel">
-            <div class="owl-carousel owl-theme">
-                <div class="item" id="item1">
-                    <img src="img/1.svg">
+            <div class="owl-carousel owl-carousel--introduction owl-theme">
+                <div class="item">
+                    <object type="image/svg+xml" data="img/1.svg" class="fkd-intro__svg"></object>
                     <h5>Login</h5>
                     <p style="text-align: center">Login and browse offers, deals or stores</p>
                 </div>
-                <div class="item" id="item2">
-                    <img src="img/2.svg">
+                <div class="item">
+                    <object type="image/svg+xml" data="img/2.svg" class="fkd-intro__svg"></object>
                     <h5>Shop</h5>
                     <p style="text-align: center">Click on offer or deals and shop normally within 24 hours</p>
                 </div>
-                <div class="item" id="item3">
-                    <img src="img/3.svg">
+                <div class="item">
+                    <object type="image/svg+xml" data="img/3.svg" class="fkd-intro__svg"></object>
                     <h5>Get FKD Coins</h5>
                     <p style="text-align: center">FKD coins will be added after valid and successful purchase</p>
                 </div>
-                <div class="item" id="item4">
-                    <img src="img/4.svg">
+                <div class="item">
+                    <object type="image/svg+xml" data="img/4.svg" class="fkd-intro__svg"></object>
                     <h5>Get Real Cash</h5>
                     <p style="text-align: center">Convert FKD coins into real cash.</p>
                 </div>
-                <div class="item" id="item5">
-                    <img src="img/logo.svg">
-                    <!--<p style="text-align: center;">Enjoy</p>-->
+                <div class="item">
+                    <object type="image/svg+xml" data="img/logo.svg" class="fkd-intro__svg" style="width: 90%;max-width: 300px"></object>
+                    <h5>Lets Get Started</h5>
+                    <p style="text-align: center">Each day, saving day...</p>
                 </div>
             </div>
             <div id="ok-button">
-                <button class="md-button md-button--flat">Got It</button>
+                <button class="md-button md-button--flat" disabled>Start Saving</button>
             </div>
         </div>
         <div class="md-introduction__shadow">
 
         </div>
-        <div class="md-introduction__nav" id="1" >
+        <div class="md-introduction__nav">
             <button class="md-button nav-button" id="nav-prev">Prev</button>
             <button class="md-button nav-button" id="nav-next">Next</button>
         </div>
@@ -109,6 +110,22 @@
             if (username !== "" || username !== null) {
                 alert("Welcome to FKD");
                 setCookie("aXMxc3R1c2Vy", "1", 180);
+            }
+        }
+    }
+</script>
+<script class="tempScript">
+    document.onkeydown =  function (e) {
+        var code = e.keyCode || e.which;
+        if(code === 37) {
+            $('#nav-prev').click();
+        }
+        if(code === 39) {
+            $('#nav-next').click();
+        }
+        if(code === 13) {
+            if($('#ok-button').find('.md-button').prop('disabled') === false){
+                $('#ok-button').click();
             }
         }
     }

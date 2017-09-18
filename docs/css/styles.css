@@ -28,33 +28,29 @@
     color: #4caf50;
 }
 
-.item {
-    /*background-size: contain;*/
-    /*background-repeat: no-repeat;*/
+.owl-carousel--introduction .item {
     width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center !important;
-    z-index: 33;
 }
-.imgDiv{
-    width: 100%;
-    height: 100%;
-}
-.item > img {
+
+.owl-carousel--introduction .item > .fkd-intro__svg {
     width: 240px;
     height: 240px;
     margin-top: -52px;
+    z-index: -1;
 }
 
-.item > p {
+.owl-carousel--introduction .item > p {
     padding-left: 20px;
     padding-right: 20px;
+    color: rgba(0,0,0,0.54);
 }
 
-.owl-dots {
+.owl-carousel--introduction .owl-dots {
     position: fixed;
     bottom: 0;
     margin-bottom: 20px;
@@ -62,16 +58,16 @@
     right: 25%;
 }
 
-.owl-dot > span {
+.owl-carousel--introduction .owl-dot > span {
     background-color: rgba(76, 175, 80, 0.3) !important;
 }
 
-.active > span {
+.owl-carousel--introduction .active > span {
     background-color: #4caf50 !important;
 
 }
 
-.owl-nav {
+.owl-carousel--introduction .owl-nav {
     display: none;
     position: absolute;
     bottom: 30px;
@@ -97,7 +93,7 @@
     color: #4caf50;
 }
 
-@media only screen and (min-width: 800px) and (min-height: 500px) {
+@media only screen and (min-width: 959px) and (min-height: 500px) {
     .md-introduction {
         background-color: transparent;
         position: fixed;
@@ -105,8 +101,6 @@
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        /*width: 100%;*/
-        /*height: 100%;*/
         overflow: hidden;
         z-index: 30;
     }
@@ -125,27 +119,27 @@
     .md-introduction__carousel {
         z-index: 30;
         position: absolute;
-        width: 400px;
+        width: 600px;
     }
 
-    .item {
+    .owl-carousel--introduction .item {
         background-color: #fff;
-        height: 400px;
+        height: 480px;
     }
 
-    .item > p {
+    .owl-carousel--introduction .item > p {
         top: 88%;
         /*bottom:10px;*/
     }
 
-    .owl-stage-outer {
+    .owl-carousel--introduction .owl-stage-outer {
         position: relative;
         z-index: 32;
         border-radius: 10px;
         box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12), 0 3px 5px -1px rgba(0, 0, 0, .2)
     }
 
-    .owl-nav {
+    .owl-carousel--introduction .owl-nav {
         z-index: 29 !important;
         display: flex;
         margin: 0 !important;
@@ -155,11 +149,11 @@
         align-items: center;
     }
 
-    .md-button--fab {
+    .md-introduction .md-button--fab {
         background-color: #fff;
     }
 
-    .owl-prev, .owl-next {
+    .md-introduction .owl-prev, .owl-next {
         /*height: 40px;*/
         /*width: 40px;*/
         background-color: transparent !important;
@@ -170,19 +164,19 @@
         align-items: center;
     }
 
-    .owl-prev > i, .owl-next > i {
+    .md-introduction .owl-prev > i, .md-introduction .owl-next > i {
         color: #111;
     }
 
-    .owl-prev {
+    .md-introduction .owl-prev {
         transform: translateX(-120px);
     }
 
-    .owl-next {
+    .md-introduction .owl-next {
         transform: translateX(120px);
     }
 
-    .owl-dots {
+    .md-introduction .owl-dots {
         /*position: relative;*/
         bottom: -50px;
         left: 0;
@@ -195,5 +189,8 @@
 
     #ok-button {
         position: absolute;
+    }
+    .owl-carousel--introduction .item > .fkd-intro__svg {
+        z-index: 1;
     }
 }

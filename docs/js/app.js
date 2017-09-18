@@ -16,10 +16,12 @@ $(function () {
         if ($('.owl-next').hasClass('disabled')) {
             $('.md-introduction__nav').css('display', 'none');
             $('#ok-button').css('display', 'block');
+            $('#ok-button').find('.md-button').prop('disabled', false);
         }
         else {
             $('.md-introduction__nav').css('display', 'flex');
             $('#ok-button').css('display', 'none');
+            $('#ok-button').find('.md-button').prop('disabled', true);
         }
     });
     $('#nav-prev').click(function () {
@@ -30,19 +32,6 @@ $(function () {
     });
     $('#ok-button').click(function () {
         $('.md-introduction').css('display', 'none')
+        $('.tempScript').remove();
     });
-
-
-    // $('.owl-next').css('display','none');
-    // $('.owl-previous').css('display','none');
-    // $('.owl-dot').click(false);
-    // $('.owl-next').on('click', function () {
-    //     if ($('.owl-next').hasClass('disabled')) {
-    //         $('.owl-nav').css('justify-content', 'flex-end');
-    //         $('.owl-prev').css('display', 'none');
-    //         $('.owl-next').html("Get Started").removeClass('disabled').on('click', function () {
-    //             $('.md-introduction').css('display', 'none');
-    //         });
-    //     }
-    // });
 });
