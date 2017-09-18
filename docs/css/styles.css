@@ -29,19 +29,29 @@
 }
 
 .item {
-    background-size: contain;
-    background-repeat: no-repeat;
+    /*background-size: contain;*/
+    /*background-repeat: no-repeat;*/
     width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center !important;
     z-index: 33;
 }
-.item > p{
-    position: absolute;
-    top:50px;
+.imgDiv{
+    width: 100%;
+    height: 100%;
+}
+.item > img {
+    width: 240px;
+    height: 240px;
+    margin-top: -52px;
+}
+
+.item > p {
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .owl-dots {
@@ -53,7 +63,7 @@
 }
 
 .owl-dot > span {
-    background-color: rgba(76, 175, 80,0.3) !important;
+    background-color: rgba(76, 175, 80, 0.3) !important;
 }
 
 .active > span {
@@ -72,16 +82,18 @@
     justify-content: space-between;
     z-index: 29 !important;
 }
-#ok-button{
+
+#ok-button {
     display: none;
     position: fixed;
     bottom: 0;
     right: 0;
     margin-right: 16px;
     margin-bottom: 16px;
-    z-index:30;
+    z-index: 30;
 }
-#ok-button > button{
+
+#ok-button > button {
     color: #4caf50;
 }
 
@@ -120,10 +132,12 @@
         background-color: #fff;
         height: 400px;
     }
-    .item > p{
+
+    .item > p {
         top: 88%;
         /*bottom:10px;*/
     }
+
     .owl-stage-outer {
         position: relative;
         z-index: 32;
@@ -179,7 +193,7 @@
         visibility: hidden;
     }
 
-    #ok-button{
+    #ok-button {
         position: absolute;
     }
 }

@@ -1,4 +1,5 @@
 $(function () {
+    checkCookie();
     $('.owl-carousel').owlCarousel({
         margin: 0,
         loop: false,
