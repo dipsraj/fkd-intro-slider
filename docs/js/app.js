@@ -22,7 +22,7 @@ $(function () {
         else {
             $('.md-introduction__nav').css('display', 'flex');
             $('#ok-button').css('display', 'none');
-            $('.owl-dots').css('display','');
+            $('.owl-dots').css('display','block');
             $('#ok-button').find('.md-button').prop('disabled', true);
         }
     });
